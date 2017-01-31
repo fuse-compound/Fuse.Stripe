@@ -1,0 +1,15 @@
+{
+  "Packages": [
+    "Fuse",
+    "FuseJS"
+  ],
+  "Projects": [
+    "../../src/Stripe.unoproj",
+  ],
+  "Stripe": {
+    "PublishableKey": "- YOUR MAGIC KEY GOES HERE :) -"
+  },
+  "Includes": [
+    "*",
+  ]
+}

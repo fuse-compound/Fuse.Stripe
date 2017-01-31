@@ -1,0 +1,15 @@
+{
+  "Packages": [
+    "Fuse",
+    "FuseJS",
+  ],
+  "Includes": [
+    "Core.uno",
+    "Helpers.uno",
+    "Token.uno",
+    "Card.uno",
+    "CardParams.uno",
+    "Transactions.uno",
+    "JS.uno"
+  ]
+}

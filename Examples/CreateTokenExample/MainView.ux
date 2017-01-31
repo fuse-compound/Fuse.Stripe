@@ -1,0 +1,17 @@
+<App Background="#eee">
+	<JavaScript File="MainView.js"/>
+	<DockPanel>
+		<StackPanel Dock="Top" Background="#2586EC">
+			<StatusBarBackground/>
+			<Fuse.iOS.StatusBarConfig Style="Light"/>
+		</StackPanel>
+
+		<StackPanel>
+			<Text Value="Blep Next" />
+			<Button Text="TestPay" Clicked="{testPay}" />
+			<TextView Value="{info}" Height="500"/>
+		</StackPanel>
+
+		<BottomBarBackground Dock="Bottom" />
+	</DockPanel>
+</App>
