@@ -7,7 +7,7 @@
     "../../src/Stripe.unoproj",
   ],
   "Stripe": {
-    "PublishableKey": "- YOUR MAGIC KEY GOES HERE :) -"
+    "PublishableKey": "pk_test_0kesA4KSuJhT6daCJ5FemD0K"
   },
   "Includes": [
     "*",

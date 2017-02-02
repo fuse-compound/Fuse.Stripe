@@ -29,32 +29,20 @@ namespace Fuse.Stripe
 
 			// AddMember(new NativeFunction("testFunc", TestFunc));
 			//AddMember(new NativeProperty<bool, bool>("testProperty", TestProperty));
+			AddMember(new NativePromise<CardValidation, Scripting.Object>("validateCard", ValidateCardParams, CardValidationToJS));
 			AddMember(new NativePromise<Token, Scripting.Object>("createToken", TokenFromCardParams, TokenToJS));
 		}
 
-		//----------------------------------------------------------------------
-
-		// extern(iOS)
-		// static bool TestProperty()
-		// {
-		// 	return Core.TestProperty;
-		// }
-
-		//----------------------------------------------------------------------
-
-		// extern(iOS)
-		// static string TestFunc(Context c, object[] args)
-		// {
-		// 	return Core.TestFunc();
-		// }
-
-		//-----------------------------------------------------------------------
-
+		static Future<CardValidation> ValidateCardParams(object[] args)
+		{
+			var cardParams = CardParamsFromJS((Scripting.Object)args[0]);
+			return new ValidateCardParams(cardParams);
+		}
 
 		static Future<Token> TokenFromCardParams(object[] args)
 		{
 			var cardParams = CardParamsFromJS((Scripting.Object)args[0]);
-			return Transactions.TokenFromCardParams(cardParams);
+			return new TokenFromCardParams(cardParams);
 		}
 
 		static CardParams CardParamsFromJS(Scripting.Object obj)
@@ -65,6 +53,15 @@ namespace Fuse.Stripe
 			cardParams.ExpiryYear = Marshal.ToInt(obj["exp_year"]);
 			cardParams.CVC = (string)obj["cvc"];
 			return cardParams;
+		}
+
+		static Scripting.Object CardValidationToJS(Context c, CardValidation cv)
+		{
+			var res = c.NewObject();
+			res["numberValid"] = cv.NumberValid;
+			res["expiryValid"] = cv.ExpiryValid;
+			res["cvcValid"] = cv.CVCValid;
+			return res;
 		}
 
 		static Scripting.Object TokenToJS(Context c, Token token)

@@ -9,7 +9,9 @@
     "Token.uno",
     "Card.uno",
     "CardParams.uno",
-    "Transactions.uno",
+    "CardValidation.uno",
+    "ValidateCardParams.uno",
+    "TokenFromCardParams.uno",
     "JS.uno"
   ]
 }

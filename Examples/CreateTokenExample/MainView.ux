@@ -8,8 +8,13 @@
 
 		<StackPanel>
 			<Text Value="Blep Next" />
-			<Button Text="TestPay" Clicked="{testPay}" />
-			<TextView Value="{info}" Height="500"/>
+			<TextInput Value="{cardNumber}" />
+			<TextInput Value="{expiryMonth}" />
+			<TextInput Value="{expiryYear}" />
+			<TextInput Value="{cvc}" />
+			<Button Text="Create Token" Clicked="{testPay}" />
+			<Button Text="Validate Card Details Locally" Clicked="{validateCardParams}" />
+			<TextView Value="{info}" Height="500" TextWrapping="Wrap"/>
 		</StackPanel>
 
 		<BottomBarBackground Dock="Bottom" />
