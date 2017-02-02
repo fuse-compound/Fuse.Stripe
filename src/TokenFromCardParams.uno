@@ -26,7 +26,7 @@ namespace Fuse.Stripe
 			//-----
 			[[STPAPIClient sharedClient] createTokenWithCard:cardParams completion:^(STPToken *token, NSError *error) {
 				if (error) {
-					@{TokenFromCardParams:Of(_this).Reject(string):Call(error.description)};
+					@{TokenFromCardParams:Of(_this).Reject(string):Call(error.localizedDescription)};
 				} else {
 					@{TokenFromCardParams:Of(_this).Resolve(ObjC.Object):Call(token)};
 				}
@@ -81,7 +81,8 @@ namespace Fuse.Stripe
 					}
 					public void onError(Exception error)
 					{
-						@{TokenFromCardParams:Of(_this).Reject(string):Call(error.getMessage())};
+						String message = error.getLocalizedMessage();
+						@{TokenFromCardParams:Of(_this).Reject(string):Call(message)};
 					}
 				}
 			);

@@ -24,6 +24,7 @@ var testPay = function() {
         console.log("testPay worked!\n" + json_info);
     }).catch(function(e) {
         console.log("testPay failed:" + e);
+		info.value = "Creating Token Failed:\n" + e;
     });
 };
 
@@ -43,6 +44,7 @@ var validateCardParams = function() {
         console.log("validateCardParams worked!\n" + json_info);
     }).catch(function(e) {
         console.log("validateCardParams failed:" + e);
+		info.value = "Validate Failed:\n" + e;
     });
 };
 

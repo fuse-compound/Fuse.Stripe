@@ -20,8 +20,6 @@ namespace Fuse.Stripe
 
 		public StripeModule()
 		{
-			debug_log "Stripe booting up :)";
-
 			if(_instance != null) return;
 			Resource.SetGlobalKey(_instance = this, "Stripe");
 

@@ -66,11 +66,15 @@ See the [example](./Examples/CreateTokenExample/MainView.js) for more.
 
 The beauty of Stripe is how it relieves you from handle sensitive data on you're backend. When you have the token you pass it to your own backend and then communicate with Stripe via their API. For all the details, see their [excellent documentation here](https://stripe.com/docs)
 
-## How are the tokens formatted
+The token we provide has a bunch of info but the important bit you need on your server is the `id`. So you can choose how much of the token we provide you want to send.
+
+## How are the tokens formatted?
+
+Like this:
 
 ```
 {
-	"id": stringHere,
+	"id": stringHere, // this is the important bit :)
 	"object": "token",
 	"client_ip": null,
 	"created": "DateTime in UTC time in ISO-8601 format",
@@ -133,3 +137,7 @@ Here is an example of a token created using on of the test cards:
 	}
 }
 ```
+
+## Obligatory Pic!
+
+![wee](./Examples/CreateTokenExample/screenshot.png)
