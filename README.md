@@ -31,7 +31,7 @@ var cardParams = {
 
 And call `Stripe.createToken(cardParams)`. This returns a promise of a Stripe `token`. See the [example](./Examples/CreateTokenExample/MainView.js) for more.
 
-## createToken
+## validateCard
 
 Take some card details, once again in this format
 
@@ -64,7 +64,7 @@ See the [example](./Examples/CreateTokenExample/MainView.js) for more.
 
 ## How do I use these tokens?
 
-The beauty of Stripe is how it relieves you from handle sensitive data on you're backend. When you have the token you pass it to your own backend and then communicate with Stripe via their API. For all the details, see their [excellent documentation here](https://stripe.com/docs)
+The beauty of Stripe is how it relieves you from handle sensitive data on your backend. When you have the token you pass it to your own backend and then communicate with Stripe via their API. For all the details, see their [excellent documentation here](https://stripe.com/docs)
 
 The token we provide has a bunch of info but the important bit you need on your server is the `id`. So you can choose how much of the token we provide you want to send.
 
