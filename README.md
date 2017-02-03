@@ -10,6 +10,11 @@ Is really fast, just do the following:
 - Whilst you are in the `unoproj` file also add this `"Stripe": { "PublishableKey": "<YourKey>" },`
 - Add this to your JS `var Stripe = require("Stripe");`
 
+Stripe's functionality is provided though `Gradle` on Android & `CocoaPods` on iOS. So when you build you have to declare that you want to use those systems:
+
+- For Android: `uno build -tAndroid -DGradle -r`
+- For iOS: `uno build -iOS -DCocoaPods -r`
+
 Done!
 
 # API
