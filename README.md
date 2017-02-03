@@ -65,6 +65,16 @@ The values for the 3 keys can be one of the following: `valid`, `invalid` or `in
 
 `incomplete` means that the value look like it could be valid, but it is missing some characters.
 
+When building for non-mobile platforms we return dummy data in the following format:
+
+```
+{
+  "cvcValid": "unknown",
+  "expiryValid": "invalid",
+  "numberValid": "valid"
+}
+```
+
 See the [example](./Examples/CreateTokenExample/MainView.js) for more.
 
 ## How do I use these tokens?
@@ -72,6 +82,8 @@ See the [example](./Examples/CreateTokenExample/MainView.js) for more.
 The beauty of Stripe is how it relieves you from handle sensitive data on your backend. When you have the token you pass it to your own backend and then communicate with Stripe via their API. For all the details, see their [excellent documentation here](https://stripe.com/docs)
 
 The token we provide has a bunch of info but the important bit you need on your server is the `id`. So you can choose how much of the token we provide you want to send.
+
+When building for non-mobile platforms we return dummy data in the token's fields.
 
 ## How are the tokens formatted?
 
