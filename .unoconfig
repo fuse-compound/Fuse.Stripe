@@ -1,1 +1,1 @@
-PackageSourcePaths += src
+Package.SourcePaths += src
