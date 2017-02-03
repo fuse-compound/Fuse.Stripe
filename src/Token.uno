@@ -11,11 +11,19 @@ using Fuse.Controls.Native.Android;
 
 namespace Fuse.Stripe
 {
-	public extern(!mobile) class Token
+	public extern(!MOBILE) class Token
 	{
-		public extern(iOS) Token(object foreignToken)
-		{
-		}
+		public string ID = "the_stripe_token";
+
+		public string Created = "2101-01-01T00:00:00Z";
+
+		public bool LiveMode = false;
+
+		public string Type = "n/a";
+
+		public bool Used = false;
+
+		public Card Card = new Card();
 	}
 
 	[Require("Source.Include", "Stripe.h")]

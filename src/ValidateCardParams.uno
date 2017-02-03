@@ -11,6 +11,14 @@ using Fuse.Controls.Native.Android;
 
 namespace Fuse.Stripe
 {
+	extern(!MOBILE) class ValidateCardParams : Promise<CardValidation>
+	{
+		public ValidateCardParams(CardParams uCardParams)
+		{
+			Resolve(new CardValidation("valid", "invalid", "unknown"));
+		}
+	}
+
 	[ForeignInclude(Language.Java,
 					"com.stripe.android.model.Token",
 					"com.stripe.android.Stripe",

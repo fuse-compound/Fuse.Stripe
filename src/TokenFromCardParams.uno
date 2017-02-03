@@ -11,6 +11,14 @@ using Fuse.Controls.Native.Android;
 
 namespace Fuse.Stripe
 {
+	extern(!MOBILE) class TokenFromCardParams : Promise<Token>
+	{
+		public TokenFromCardParams(CardParams uCardParams)
+		{
+			Resolve(new Token());
+		}
+	}
+
 	[extern(iOS) Require("Source.Include", "Stripe.h")]
 	extern(iOS) class TokenFromCardParams : Promise<Token>
 	{

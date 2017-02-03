@@ -11,11 +11,43 @@ using Fuse.Controls.Native.Android;
 
 namespace Fuse.Stripe
 {
-	public extern(!mobile) class Card
+	public extern(!MOBILE) class Card
 	{
-		public extern(iOS) Card(object foreignCard)
-		{
-		}
+		public string Number = "n/a";
+
+		public string CVC = "n/a";
+
+		public int ExpMonth = 0;
+
+		public int ExpYear = 0;
+
+		public string Name = "n/a";
+
+		public string AddressLine1 = "n/a";
+
+		public string AddressLine2 = "n/a";
+
+		public string AddressCity = "n/a";
+
+		public string AddressZip = "n/a";
+
+		public string AddressState = "n/a";
+
+		public string AddressCountry = "n/a";
+
+		public string Currency = "n/a";
+
+		public string Last4 = "n/a";
+
+		public string Type = "n/a";
+
+		public string Brand = "n/a";
+
+		public string Fingerprint = "n/a";
+
+		public string Funding = "n/a";
+
+		public string Country = "n/a";
 	}
 
 	[Require("Source.Include", "Stripe.h")]
