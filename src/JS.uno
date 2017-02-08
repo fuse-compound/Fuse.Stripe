@@ -25,8 +25,6 @@ namespace Fuse.Stripe
 
 			Core.Init();
 
-			// AddMember(new NativeFunction("testFunc", TestFunc));
-			//AddMember(new NativeProperty<bool, bool>("testProperty", TestProperty));
 			AddMember(new NativePromise<CardValidation, Scripting.Object>("validateCard", ValidateCardParams, CardValidationToJS));
 			AddMember(new NativePromise<Token, Scripting.Object>("createToken", TokenFromCardParams, TokenToJS));
 		}

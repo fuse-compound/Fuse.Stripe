@@ -78,7 +78,7 @@ namespace Fuse.Stripe
 			get
 			@{
 				STPToken* token = (STPToken*)@{Token:Of(_this)._handle};
-				return NULL;// {TODO} no iOS api for this?
+				return NULL;
 			@}
 		}
 
@@ -88,7 +88,7 @@ namespace Fuse.Stripe
 			get
 			@{
 				STPToken* token = (STPToken*)@{Token:Of(_this)._handle};
-				return false;// {TODO} no iOS api for this?
+				return false;
 			@}
 		}
 

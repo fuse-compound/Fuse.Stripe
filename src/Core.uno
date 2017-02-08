@@ -30,7 +30,6 @@ namespace Fuse.Stripe
 		@}
 	}
 
-	//[ForeignInclude(Language.Java, "java.util.ArrayList")]
 	[Require("Gradle.Dependency.Compile", "com.stripe:stripe-android:2.0.2")]
 	extern(Android)
 	public class Core
