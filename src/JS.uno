@@ -21,7 +21,7 @@ namespace Fuse.Stripe
 		public StripeModule()
 		{
 			if(_instance != null) return;
-			Resource.SetGlobalKey(_instance = this, "Stripe");
+			Uno.UX.Resource.SetGlobalKey(_instance = this, "Stripe");
 
 			Core.Init();
 
