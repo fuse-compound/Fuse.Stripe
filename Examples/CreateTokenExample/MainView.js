@@ -18,14 +18,14 @@ var testPay = function() {
 		"cvc": cvc.value
 	};
 
-    Stripe.createToken(cardParams).then(function(token) {
+	Stripe.createToken(cardParams).then(function(token) {
 		var json_info = JSON.stringify(token);
 		info.value = json_info;
-        console.log("testPay worked!\n" + json_info);
-    }).catch(function(e) {
-        console.log("testPay failed:" + e);
+		console.log("testPay worked!\n" + json_info);
+	}).catch(function(e) {
+		console.log("testPay failed:" + e);
 		info.value = "Creating Token Failed:\n" + e;
-    });
+	});
 };
 
 var validateCardParams = function() {
@@ -38,19 +38,19 @@ var validateCardParams = function() {
 		"cvc": cvc.value
 	};
 
-    Stripe.validateCard(cardParams).then(function(result) {
+	Stripe.validateCard(cardParams).then(function(result) {
 		var json_info = JSON.stringify(result);
 		info.value = json_info;
-        console.log("validateCardParams worked!\n" + json_info);
-    }).catch(function(e) {
-        console.log("validateCardParams failed:" + e);
+		console.log("validateCardParams worked!\n" + json_info);
+	}).catch(function(e) {
+		console.log("validateCardParams failed:" + e);
 		info.value = "Validate Failed:\n" + e;
-    });
+	});
 };
 
 module.exports = {
 	validateCardParams: validateCardParams,
-    testPay: testPay,
+	testPay: testPay,
 	info: info,
 	cardNumber: cardNumber,
 	expiryMonth: expiryMonth,

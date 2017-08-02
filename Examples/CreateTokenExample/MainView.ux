@@ -1,27 +1,27 @@
 <App Background="#2586EC">
-	<DockPanel>
-		<JavaScript File="MainView.js"/>
-		<StackPanel Dock="Top" Background="#2586EC">
-			<StatusBarBackground/>
-			<Fuse.iOS.StatusBarConfig Style="Light"/>
-		</StackPanel>
-		<BottomBarBackground Dock="Bottom" />
+    <DockPanel>
+        <JavaScript File="MainView.js"/>
+        <StackPanel Dock="Top" Background="#2586EC">
+            <StatusBarBackground/>
+            <Fuse.iOS.StatusBarConfig Style="Light"/>
+        </StackPanel>
+        <BottomBarBackground Dock="Bottom" />
 
-		<StackPanel Width="90%" Height="90%" Padding="20">
-			<Rectangle Layer="Background" CornerRadius="10" Color="#fff"/>
-			<Text Value="Stripe Test" Alignment="Center" FontSize="35" TextColor="#2586EC"/>
+        <StackPanel Width="90%" Height="90%" Padding="20">
+            <Rectangle Layer="Background" CornerRadius="10" Color="#fff"/>
+            <Text Value="Stripe Test" Alignment="Center" FontSize="35" TextColor="#2586EC"/>
 
-			<Basic.TextInput Width="100%" Value="{cardNumber}" Alignment="Center" PlaceholderText="Email Address" PlaceholderColor="#bbb" />
-			<StackPanel Orientation="Horizontal">
-				<Basic.TextInput Width="100%" Value="{expiryMonth}" Alignment="Center" PlaceholderText="Email Month (MM)" PlaceholderColor="#bbb" />
-				<Basic.TextInput Width="100%" Value="{expiryYear}" Alignment="Center" PlaceholderText="Expiry Year (YY)" PlaceholderColor="#bbb" />
-			</StackPanel>
-			<Basic.TextInput Width="100%" Value="{cvc}" Alignment="Center" PlaceholderText="CVC" PlaceholderColor="#bbb" />
+            <Basic.TextInput Width="100%" Value="{cardNumber}" Alignment="Center" PlaceholderText="Email Address" PlaceholderColor="#bbb" />
+            <StackPanel Orientation="Horizontal">
+                <Basic.TextInput Width="100%" Value="{expiryMonth}" Alignment="Center" PlaceholderText="Email Month (MM)" PlaceholderColor="#bbb" />
+                <Basic.TextInput Width="100%" Value="{expiryYear}" Alignment="Center" PlaceholderText="Expiry Year (YY)" PlaceholderColor="#bbb" />
+            </StackPanel>
+            <Basic.TextInput Width="100%" Value="{cvc}" Alignment="Center" PlaceholderText="CVC" PlaceholderColor="#bbb" />
 
-			<Basic.Button Text="Validate Card Details Locally" Clicked="{validateCardParams}" />
-			<Basic.Button Text="Create Token" Clicked="{testPay}" />
+            <Basic.Button Text="Validate Card Details Locally" Clicked="{validateCardParams}" />
+            <Basic.Button Text="Create Token" Clicked="{testPay}" />
 
-			<TextView Value="{info}" Height="200" TextWrapping="Wrap"/>
-		</StackPanel>
-	</DockPanel>
+            <TextView Value="{info}" Height="200" TextWrapping="Wrap"/>
+        </StackPanel>
+    </DockPanel>
 </App>

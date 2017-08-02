@@ -42,6 +42,7 @@ AssemblyInfo.cs
 /tests/**/build/
 .uno/
 .build/
+build/
 .cache/
 .stuff/
 .unobuild
@@ -59,4 +60,3 @@ obj/
 AuthExample/FirebaseAuthenticationExample.unoproj
 AnalyticsExample/build/
 Test/*
-.editorconfig

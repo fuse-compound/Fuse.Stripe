@@ -11,11 +11,11 @@ using Fuse.Controls.Native.Android;
 
 namespace Fuse.Stripe
 {
-	public class CardParams
-	{
-		public string Number;
-		public int ExpiryMonth;
-		public int ExpiryYear;
-		public string CVC;
-	}
+    public class CardParams
+    {
+        public string Number;
+        public int ExpiryMonth;
+        public int ExpiryYear;
+        public string CVC;
+    }
 }
